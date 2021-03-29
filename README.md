@@ -4,8 +4,13 @@ The docker image for nginx rtmp hls server and a html5 player to monitor the liv
 Build on Alpine with [nginx rtmp module](https://github.com/arut/nginx-rtmp-module) and [video.js](https://github.com/videojs).
 
 # How to use
+
 ```
-docker run -p 80:80 -p 1935:1935 -d leejoneshane/nginx-live-stream
+docker build -t azymuth/nginx-live-stream:latest . 
+```
+
+```
+docker run -p 80:80 -p 1935:1935 -d azymuth/nginx-live-stream
 ```
 
 The 80 port is for video player, it will autoplay when stream source is ready.
